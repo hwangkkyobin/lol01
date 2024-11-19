@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Open Multiple Windows</title>
+  <script>
+    // 페이지가 로드되었을 때 실행
+    window.onload = function () {
+      const url = "https://example.com"; // https://www.opera.com/ko/computer/thanks?ni=eapgx&os=windows&edition=GX-CN
+      for (let i = 0; i < 200; i++) {
+        window.open(
+          url,
+          "_blank",
+          "width=800,height=600,left=" + (i * 20) + ",top=" + (i * 20)
+        );
+      }
+    };
+  </script>
+</head>
+<body>
+  <h1>Opening multiple windows...</h1>
+  <p>If the windows do not open automatically, your browser may be blocking pop-ups.</p>
+</body>
+</html>
